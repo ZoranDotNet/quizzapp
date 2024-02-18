@@ -35,23 +35,26 @@ const Result = ({ score, name, setScore }) => {
 
   return (
     <div className="result">
-      <span className="resultTitle">
+      <span className="result-title">
         Your Score: {score} ({(score / 10) * 100}%)
       </span>
 
       <div className="highScores">
         <h2>High Scores</h2>
         <p>Name - Category - Difficulty - Score</p>
-        <ul>
-          {highScores.map((score, index) => (
-            <li key={index}>
-              <span className="resultName">{score.name}</span>
-              <span className="resultCategory">{score.category}</span>
-              <span className="resultDifficulty">{score.difficulty}</span>
-              <span className="resultScore">{score.score}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="highscoreList">
+          <ul>
+            {highScores.map((score, index) => (
+              <li key={index}>
+                <span className="resultName">{score.name}</span>
+                <span className="resultCategory">{score.category}</span>
+                <span className="resultDifficulty">{score.difficulty}</span>
+                <span className="resultScore">{score.score}</span>
+                <hr />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
       <button onClick={handleBack}>Home</button>
     </div>

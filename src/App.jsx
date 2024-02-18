@@ -4,6 +4,7 @@ import Quiz from "./pages/Quiz";
 import Result from "./components/Result";
 import { useState } from "react";
 import axios from "axios";
+import "./style.css";
 
 function App() {
   const [name, setName] = useState("");

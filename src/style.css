@@ -18,8 +18,8 @@ body {
   align-items: flex-start;
   justify-content: center;
   min-height: 100vh;
-  width: 100vw;
-  background: linear-gradient(#111 0%, #000 100%);
+  width: 100%;
+  background: #000;
   font-family: "Nunito", sans-serif;
 }
 
@@ -359,14 +359,15 @@ RESULT
 .result {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 60vh;
+  justify-content: flex-start;
+  height: 100vh;
   text-align: center;
   color: #fff;
   min-width: 300px;
   font-size: 3rem;
   margin: 0 0.5rem;
-  margin-top: 6rem;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
 
   span {
     margin-bottom: 3rem;
@@ -393,6 +394,9 @@ RESULT
   margin-top: 0.5rem;
 }
 
+.highscoreList {
+  padding: 1rem;
+}
 .highScores ul {
   list-style: none;
   margin-top: 1rem;
@@ -405,5 +409,33 @@ RESULT
   span {
     color: white;
     padding-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 614px) {
+  .result-title {
+    font-size: 2rem;
+  }
+
+  .highScores h2 {
+    font-size: 2rem;
+  }
+
+  .highScores span {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .result-title {
+    font-size: 1.2rem;
+  }
+
+  .highScores h2 {
+    font-size: 1.2rem;
+  }
+
+  .highScores span {
+    font-size: 1.2rem;
   }
 }
