@@ -123,6 +123,7 @@ body {
     padding: 5px;
     width: 100%;
     margin-bottom: 1rem;
+    color: black;
   }
 }
 
@@ -132,6 +133,7 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   border-radius: 5px;
+  color: black;
   cursor: pointer;
 }
 

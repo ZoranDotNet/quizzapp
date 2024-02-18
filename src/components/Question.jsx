@@ -1,6 +1,9 @@
 import { useState } from "react";
 import ErrorMessage from "./ErrorMessage";
 import { useNavigate } from "react-router-dom";
+import { Html5Entities } from "html-entities";
+
+const entities = new Html5Entities();
 
 const Question = ({
   score,
@@ -54,7 +57,7 @@ const Question = ({
       <div className="singleQuestion">
         {questions.length > 0 && questNr < questions.length && (
           <>
-            <h2>{questions[questNr].question}</h2>
+            <h2>{entities.decode(questions[questNr].question)}</h2>
             <div className="options">
               {error && <ErrorMessage>{error}</ErrorMessage>}
               {options.map((i) => (
