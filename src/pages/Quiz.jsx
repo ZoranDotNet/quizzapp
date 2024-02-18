@@ -3,7 +3,7 @@ import "../style.css";
 import CircleLoader from "react-spinners/CircleLoader";
 import Question from "../components/Question";
 
-const Quiz = ({ name, questions, score, setScore, setQuestions }) => {
+const Quiz = ({ name, questions, score, setScore }) => {
   const [options, setOptions] = useState([]);
   const [questNr, setQuestNr] = useState(0);
 
@@ -34,6 +34,7 @@ const Quiz = ({ name, questions, score, setScore, setQuestions }) => {
         <>
           <div className="quizInfo">
             <span>{questions[questNr].category}</span>
+            <span>{questions[questNr].difficulty}</span>
             <span>Score: {score}</span>
           </div>
           <Question
