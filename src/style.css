@@ -336,10 +336,6 @@ QUIZ PAGE
     width: 100%;
   }
 
-  .singleQuestion h2 {
-    font-size: 2rem;
-  }
-
   .controls {
     flex-direction: column;
     gap: 1rem;
