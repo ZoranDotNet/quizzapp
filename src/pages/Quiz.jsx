@@ -6,9 +6,11 @@ import Question from "../components/Question";
 const Quiz = ({ name, questions, score, setScore }) => {
   const [options, setOptions] = useState([]);
   const [questNr, setQuestNr] = useState(0);
+  const [category, setCategory] = useState("");
+  const [difficulty, setDifficulty] = useState("");
 
   useEffect(() => {
-    console.log(questions);
+    //console.log(questions);
     if (questions.length > 0 && questNr < questions.length) {
       const currentQuestion = questions[questNr];
       const options = [
@@ -17,10 +19,14 @@ const Quiz = ({ name, questions, score, setScore }) => {
       ];
       const shuffledOptions = handleShuffle(options);
       setOptions(shuffledOptions);
+      setCategory(currentQuestion.category);
+      setDifficulty(currentQuestion.difficulty);
+      //console.log(category);
+      //console.log(difficulty);
     }
   }, [questions, questNr]);
 
-  console.log(options);
+  //console.log(options);
 
   const handleShuffle = (options) => {
     return options.sort(() => Math.random() - 0.5);
@@ -45,6 +51,8 @@ const Quiz = ({ name, questions, score, setScore }) => {
             correct={questions[questNr]?.correct_answer}
             score={score}
             setScore={setScore}
+            difficulty={difficulty}
+            category={category}
           />
         </>
       ) : (

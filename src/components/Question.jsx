@@ -10,6 +10,8 @@ const Question = ({
   options,
   questNr,
   setQuestNr,
+  category,
+  difficulty,
 }) => {
   const [selected, setSelected] = useState();
   const [error, setError] = useState(false);
@@ -34,7 +36,9 @@ const Question = ({
 
   const handleNext = () => {
     if (questNr > 8) {
-      navigate("/result");
+      navigate("/result", {
+        state: { category: category, difficulty: difficulty },
+      });
     } else if (selected) {
       setQuestNr(questNr + 1);
       setSelected();

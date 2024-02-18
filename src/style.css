@@ -350,6 +350,12 @@ QUIZ PAGE
   }
 }
 
+/*
+
+RESULT
+
+*/
+
 .result {
   display: flex;
   flex-direction: column;
@@ -360,17 +366,44 @@ QUIZ PAGE
   min-width: 300px;
   font-size: 3rem;
   margin: 0 0.5rem;
+  margin-top: 6rem;
 
   span {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
   }
 
   button {
     background-color: #c40094;
-    padding: 10px 15px;
+    padding: 15px;
     border: none;
-    width: 70%;
-    margin: 0 auto;
+    width: 80%;
+    margin: 1rem auto;
+    color: #fff;
+    font-size: 1.2rem;
     cursor: pointer;
+  }
+}
+
+.resultTitle {
+  color: white;
+}
+
+.highScores p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.highScores ul {
+  list-style: none;
+  margin-top: 1rem;
+
+  li {
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+
+  span {
+    color: white;
+    padding-right: 1rem;
   }
 }
