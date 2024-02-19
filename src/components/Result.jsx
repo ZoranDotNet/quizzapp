@@ -40,7 +40,7 @@ const Result = ({ score, name, setScore }) => {
       </span>
 
       <div className="highScores">
-        <h2>High Scores</h2>
+        <h3>High Scores</h3>
         <p>Name - Category - Difficulty - Score</p>
         <div className="highscoreList">
           <ul>
