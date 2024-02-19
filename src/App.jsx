@@ -6,6 +6,7 @@ import { useState } from "react";
 import axios from "axios";
 import "./style.css";
 import { decode } from "html-entities";
+import Footer from "./components/Footer";
 
 function App() {
   const [name, setName] = useState("");
@@ -38,30 +39,37 @@ function App() {
   };
 
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <Home name={name} setName={setName} fetchQuestions={fetchQuestions} />
-        }
-      />
-      <Route
-        path="/quiz"
-        element={
-          <Quiz
-            questions={questions}
-            name={name}
-            score={score}
-            setScore={setScore}
-            setQuestions={setQuestions}
-          />
-        }
-      />
-      <Route
-        path="/result"
-        element={<Result score={score} name={name} setScore={setScore} />}
-      />
-    </Routes>
+    <>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home
+              name={name}
+              setName={setName}
+              fetchQuestions={fetchQuestions}
+            />
+          }
+        />
+        <Route
+          path="/quiz"
+          element={
+            <Quiz
+              questions={questions}
+              name={name}
+              score={score}
+              setScore={setScore}
+              setQuestions={setQuestions}
+            />
+          }
+        />
+        <Route
+          path="/result"
+          element={<Result score={score} name={name} setScore={setScore} />}
+        />
+      </Routes>
+      <Footer />
+    </>
   );
 }
 
