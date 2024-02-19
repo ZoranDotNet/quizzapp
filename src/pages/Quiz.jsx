@@ -10,7 +10,7 @@ const Quiz = ({ name, questions, score, setScore }) => {
   const [difficulty, setDifficulty] = useState("");
 
   useEffect(() => {
-    console.log(questions);
+    //console.log(questions);
     if (questions.length > 0 && questNr < questions.length) {
       const currentQuestion = questions[questNr];
       const options = [
@@ -26,7 +26,7 @@ const Quiz = ({ name, questions, score, setScore }) => {
     }
   }, [questions, questNr]);
 
-  console.log(options);
+  //console.log(options);
 
   const handleShuffle = (options) => {
     return options.sort(() => Math.random() - 0.5);

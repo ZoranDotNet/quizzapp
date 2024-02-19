@@ -43,9 +43,7 @@ const Home = ({ name, setName, fetchQuestions }) => {
             onChange={(e) => setCategory(e.target.value)}
             value={category}
           >
-            <option value="⬇️ Select a category ⬇️">
-              -- Select a Category --
-            </option>
+            <option value="Select category">-- Select a Category --</option>
             {Categories.map((cat) => (
               <option key={cat.category} value={cat.value}>
                 {cat.category}

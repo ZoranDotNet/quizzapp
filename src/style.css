@@ -452,12 +452,11 @@ RESULT
   height: 30px;
   background-color: rgb(8, 8, 8);
   width: 100%;
-
   display: flex;
   align-items: center;
+  justify-content: center;
 
   span {
     color: rgb(59, 57, 57);
-    margin-left: 5rem;
   }
 }
