@@ -229,6 +229,7 @@ QUIZ PAGE
   border: 1px solid #fff;
   padding: 5px 10px;
   box-shadow: 3px 3px 2px #fff;
+  margin-bottom: 1rem;
 }
 
 .quiz {
@@ -263,16 +264,6 @@ QUIZ PAGE
   h2 {
     margin-right: 3rem;
   }
-}
-
-.timer {
-  width: 40px;
-  height: 40px;
-  border: 2px solid white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .outOfTime {
@@ -490,3 +481,13 @@ RESULT
 TIMER
 
 */
+
+.timer {
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
