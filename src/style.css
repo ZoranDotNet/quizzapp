@@ -255,6 +255,30 @@ QUIZ PAGE
   align-items: center;
 }
 
+.question-timer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  h2 {
+    margin-right: 3rem;
+  }
+}
+
+.timer {
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outOfTime {
+  background-color: red;
+}
+
 .singleQuestion {
   width: 95%;
   min-height: 350px;
@@ -460,3 +484,9 @@ RESULT
     color: rgb(59, 57, 57);
   }
 }
+
+/*
+
+TIMER
+
+*/
